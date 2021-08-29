@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="GG" content="Game">
+  <title>test</title>
+  </head>
+  <body>
+
+  <div>
+<audio id="jeden" src="audio/1.mp3"></audio>
+<img src="zdj/1.jpg" width="150" height="150" onclick="playPause()"/>
+
+<audio id="dwa" src="audio/2.mp3"></audio>
+<img src="zdj/2.jpg" width="150" height="150" onclick="playPause2()"/>
+
+ </div>
+
+<script src="jeden.js"></script>
+<script src="dwa.js"></script>
+  </body>
+</html>
+
+// JavaScript 
+const audio = document.getElementById('jeden');
+let playOrNot = false;
+
+function playPause() {
+    if (playOrNot === false) {
+        audio.play();
+        playOrNot = true;
+    } else {
+        audio.pause();
+        playOrNot = false;
+        audio.currentTime = 0;
+    }
+}
+
+// JavaScript 
+const audio2 = document.getElementById('dwa');
+let playOrNot2 = false;
+
+function playPause2() {
+    if (playOrNot2 === false) {
+        audio2.play();
+        playOrNot2 = true;
+    } else {
+        audio2.pause();
+        playOrNot2 = false;
+        audio2.currentTime = 0;
+    }
+}
